@@ -1,4 +1,4 @@
-$.getJSON("http://localhost:8080/messages", function (data, status) {
+$.getJSON("http://mobileagri.homeip.net:8080/messages", function (data, status) {
     var options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
 
     var i = 0;
@@ -38,7 +38,7 @@ $("#envoyer").click(function () {
                + "\"}";
     console.log(data);
     $.ajax({
-               url: "http://localhost:8080/message",
+               url: "http://mobileagri.homeip.net:8080/message",
                type: "POST",
                data: data,
                contentType: "application/json; charset=utf-8",
