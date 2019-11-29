@@ -44,10 +44,14 @@ $("#envoyer").click(function () {
                contentType: "application/json; charset=utf-8",
                dataType: "json",
                success: function (data, status) {
-                   alert("Votre message a bien été envoyé !");
+                   alert("Votre message a bien été envoyé !\nIl est actuellement en attente de validation pour apparaitre sur le site.");
                    //recharge la page courante
                    location.reload();
+               },
+               error: function(XMLHttpRequest, textStatus, errorThrown) {
+                   alert("Status: " + textStatus+"\nIl y a actuellement une erreur, veuillez réessayer ultérieurement.");
                }
+
            })
 
     /* $.post("http://localhost:8080/message",
